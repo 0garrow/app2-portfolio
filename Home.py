@@ -17,7 +17,7 @@ with col2:
 
 content2 = """Below you can find some if the apps I have built in Python. Feel free to contact me."""
 
-st.write(content2)
+st.subheader(content2)
 
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
