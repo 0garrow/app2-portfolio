@@ -24,7 +24,7 @@ col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 df = pandas.read_csv("data.csv", sep=";")
 
 with col3:
-    for index, row in df[:10].iterrows():
+    for index, row in df[::2].iterrows():
         st.header(row["title"])
         st.write(row["description"])
         st.image("images/" + row["image"])
@@ -32,7 +32,7 @@ with col3:
 
 
 with col4:
-    for index, row in df[10:].iterrows():
+    for index, row in df[1::2].iterrows():
         st.header(row["title"])
         st.write(row["description"])
         st.image("images/" + row["image"])
